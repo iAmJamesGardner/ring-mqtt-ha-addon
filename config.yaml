@@ -26,7 +26,7 @@ ports_description:
 init: false
 video: true
 options:
-  mqtt_url: 'mqtt://auto_username:auto_password@auto_hostname'
+  mqtt_url: 'mqtt2://auto_username:auto_password@auto_hostname'
   mqtt_options: ''
   livestream_user: ''
   livestream_pass: ''
