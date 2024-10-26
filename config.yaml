@@ -1,5 +1,5 @@
-name: Ring-MQTT with Video Streaming 2
-version: 5.7.1
+name: Ring-MQTT with Video Streaming (Secondary)
+version: 5.7.2
 slug: ring_mqtt2
 description: Integrate Ring Devices into Home Assistant via MQTT and RTSP
 startup: application
@@ -11,18 +11,18 @@ arch:
   - armv7
 url: 'https://github.com/iAmJamesGardner/ring-mqtt-ha-addon'
 image: 'tsightler/ring-mqtt'
-webui: 'http://[HOST]:[PORT:55124]/'
+webui: 'http://[HOST]:[PORT:55123]/'
 ingress: true
-ingress_port: 55124
+ingress_port: 55123
 services:
   - 'mqtt:need'
 map:
   - ssl
-watchdog: 'http://[HOST]:[PORT:55124]/'
+watchdog: 'http://[HOST]:[PORT:55123]/'
 ports:
-  8555/tcp: null
+  8554/tcp: null
 ports_description:
-  8555/tcp: 'RTSP Server External Port (IMPORTANT: Only needed to allow RTSP clients outside of Home Assistant, configure livestream username/password before enabling!)'
+  8554/tcp: 'RTSP Server External Port (IMPORTANT: Only needed to allow RTSP clients outside of Home Assistant, configure livestream username/password before enabling!)'
 init: false
 video: true
 options:
