@@ -11,14 +11,14 @@ arch:
   - armv7
 url: 'https://github.com/iAmJamesGardner/ring-mqtt-ha-addon'
 image: 'iAmJamesGardner/ring-mqtt'
-webui: 'http://[HOST]:[PORT:55123]/'
+webui: 'http://[HOST]:[PORT:55124]/'
 ingress: true
-ingress_port: 55123
+ingress_port: 55124
 services:
   - 'mqtt:need'
 map:
   - ssl
-watchdog: 'http://[HOST]:[PORT:55123]/'
+watchdog: 'http://[HOST]:[PORT:55124]/'
 ports:
   8554/tcp: null
 ports_description:
@@ -35,7 +35,7 @@ options:
   enable_modes: false
   enable_panic: false
   branch: addon
-  debug: ring-*
+  debug: ring2-*
   location_ids: []
 schema:
   mqtt_url: url
